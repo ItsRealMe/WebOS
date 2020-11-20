@@ -1,0 +1,152 @@
+<html>
+
+<head>
+    <title>Setup</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <style>
+        body {
+            height: 100%;
+            width: 100%;
+            background-color: #1a1a1a;
+        }
+
+        .ContainerDiv {
+            height: 90%;
+            width: 80%;
+            background-color: #5454aa;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            margin: auto;
+            border-radius: 10px 10px 10px 10px;
+        }
+
+        .ContainerTabs {
+            height: 5%;
+            width: 100%;
+            background-color: rgb(67, 22, 109);
+            border-radius: 10px 10px 0px 0px;
+        }
+
+        .TabItems {
+            height: 100%;
+            width: 20%;
+            border-radius: 5px 5px 5px 5px;
+            background-color: blueviolet;
+            text-align: center;
+            font-size: large;
+            font-weight: 1000;
+            color: whitesmoke;
+            font-family: sans-serif;
+            border-width: 0px;
+            border-color: whitesmoke;
+            transition: 0.3s;
+        }
+
+        .TabItems:hover{
+            background-color: #4e4e79;
+        }
+
+        .MenuTab {
+            height: 100%;
+            width: 6%;
+            margin-left: 0.5%;
+            background-color: blueviolet;
+            border-radius: 5px 5px 5px 5px;
+            text-align: center;
+            font-size: large;
+            font-weight: 1000;
+            color: whitesmoke;
+            border: none;
+            transition: 0.3s;
+        }
+
+        .MenuTab:hover{
+            background-color: #4e4e79;
+        }
+    </style>
+    <script>
+        $(document).ready(function () {
+            $("#TimeAndRegion").click(function () {
+                $("#TimeAndRegion").css(
+                    'border-bottom-width', '5px'
+                )
+                $("#Features").css(
+                    'border-bottom-width', '0px'
+                )
+                $("#Overview").css(
+                    'border-bottom-width', '0px'
+                )
+                $("#Setup").css(
+                    'border-bottom-width', '0px'
+                )
+            });
+        });
+        $(document).ready(function () {
+            $("#Features").click(function () {
+                $("#TimeAndRegion").css(
+                    'border-bottom-width', '0px'
+                )
+                $("#Features").css(
+                    'border-bottom-width', '5px'
+                )
+                $("#Overview").css(
+                    'border-bottom-width', '0px'
+                )
+                $("#Setup").css(
+                    'border-bottom-width', '0px'
+                )
+            });
+        });
+        $(document).ready(function () {
+            $("#Setup").click(function () {
+                $("#TimeAndRegion").css(
+                    'border-bottom-width', '0px'
+                )
+                $("#Features").css(
+                    'border-bottom-width', '0px'
+                )
+                $("#Overview").css(
+                    'border-bottom-width', '0px'
+                )
+                $("#Setup").css(
+                    'border-bottom-width', '5px'
+                )
+            });
+        });
+        $(document).ready(function () {
+            $("#Overview").click(function () {
+                $("#TimeAndRegion").css(
+                    'border-bottom-width', '0px'
+                )
+                $("#Features").css(
+                    'border-bottom-width', '0px'
+                )
+                $("#Overview").css(
+                    'border-bottom-width', '5px'
+                )
+                $("#Setup").css(
+                    'border-bottom-width', '0px'
+                )
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="ContainerDiv">
+        <div class="ContainerTabs">
+            <button class="MenuTab" id="Menu">
+                    Menu
+            </button>
+            <button class="TabItems" id="TimeAndRegion" style="border-bottom-width: 5px;">Time & Region</button>
+            <button class="TabItems" id="Features">Features</button>
+            <button class="TabItems" id="Setup">Setup</button>
+            <button class="TabItems" id="Overview">Overview</button>
+        </div>
+    </div>
+</body>
+
+</html>
