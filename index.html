@@ -66,6 +66,63 @@
         .MenuTab:hover{
             background-color: #4e4e79;
         }
+        .Main-Menu{
+            height: 50%;
+            width: 20%;
+            background-color: #621da1;
+            border-radius: 10px 10px 10px 10px;
+            margin-top: 2%;
+            margin-left: 2%;
+            color: burlywood;
+            text-align: center;
+            font-size: large;
+            font-weight: bold;
+            font-family: cursive;
+            position: fixed;
+        }
+        .MainMenuButtons{
+            height: 10%;
+            width: 90%;
+            text-align: center;
+            background-color: #5454aa;
+            border: none;
+            border-radius: 5px 5px 5px 5px;
+            margin-top: 2%;
+            color: white;
+            font-size: large;
+            font-family: cursive;
+        }
+        ::-webkit-scrollbar{
+            height: 5px;
+            width: 5px;
+            background-color: #00000036;
+        }
+        ::-webkit-scrollbar-track{
+            height: 5px;
+            width: 5px;
+            background-color: #00000036;
+        }
+        ::-webkit-scrollbar-thumb{
+            height: 5px;
+            width: 5px;
+            background-color: hsl(0, 0%, 0%);
+            border-radius:45px 45px 45px 45px;
+        }
+        .Blank{
+            height: 100%; 
+            width: 100%; 
+            background-color: black; 
+            position: fixed; 
+            display: none;
+            }
+        .OptionsFeatures{
+            height: 90%;
+            width: 98%;
+            background-color: blueviolet;
+            margin-left: 1%;
+            margin-top: 1%;
+            border-radius: 10px 10px 10px 10px;
+        }
     </style>
     <script>
         $(document).ready(function () {
@@ -132,21 +189,37 @@
                 )
             });
         });
+        $(document).ready(function(){
+            $('#Menu').click(function(){
+                $("#MainMenu").toggle();
+            });
+        });
+        $(document).ready(function(){
+            $('#PowerOff').click(function(){
+                $("#Blank").toggle();
+            });
+        });
     </script>
 </head>
 
 <body>
     <div class="ContainerDiv">
         <div class="ContainerTabs">
-            <button class="MenuTab" id="Menu">
-                    Menu
-            </button>
+            <button class="MenuTab" id="Menu">Menu</button>
             <button class="TabItems" id="TimeAndRegion" style="border-bottom-width: 5px;">Time & Region</button>
             <button class="TabItems" id="Features">Features</button>
             <button class="TabItems" id="Setup">Setup</button>
             <button class="TabItems" id="Overview">Overview</button>
         </div>
+        <div class="Main-Menu" id="MainMenu" style="display: none;"><center>
+            <button class="MainMenuButtons" style="overflow-y: scroll;" id="PowerOff">Power Off (Not recommended)</button>
+            <a href="https://wwww.google.com/"><button class="MainMenuButtons">Exit</button></a>
+        </center></div>
+        <div class="OptionsFeatures">
+    
+        </div>
     </div>
+    <div class="Blank" id="Blank"></div>
 </body>
 
 </html>
